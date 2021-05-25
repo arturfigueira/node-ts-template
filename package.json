@@ -1,0 +1,42 @@
+{
+  "name": "node-ts-sample",
+  "version": "1.0.0",
+  "description": "Node JS + Typescript Template",
+  "main": "dist/index.js",
+  "scripts": {
+    "clean": "rimraf dist",
+    "lint": "eslint --fix --ext .ts .",
+    "pre-build": "npm run clean && npm run lint",
+    "build": "npm run pre-build && npm run build-ts",
+    "build-ts": "tsc",
+    "test": "npm run build && jest --passWithNoTests --forceExit --coverage --verbose"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arturfigueira/node-ts-template.git"
+  },
+  "keywords": [],
+  "author": "Artur Figueira",
+  "license": "GNU",
+  "bugs": {
+    "url": "https://github.com/arturfigueira/node-ts-template/issues"
+  },
+  "homepage": "https://github.com/arturfigueira/node-ts-template#readme",
+  "devDependencies": {
+    "@types/chai": "^4.2.15",
+    "@types/eslint": "^7.2.6",
+    "@types/jest": "^26.0.20",
+    "@typescript-eslint/eslint-plugin": "^4.15.2",
+    "@typescript-eslint/parser": "^4.15.2",
+    "chai": "^4.3.0",
+    "eslint": "^7.20.0",
+    "eslint-config-prettier": "^8.0.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "jest": "^26.6.3",
+    "jest-mock-extended": "^1.0.13",
+    "prettier": "^2.2.1",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^26.5.1",
+    "typescript": "^4.1.5"
+  }
+}
